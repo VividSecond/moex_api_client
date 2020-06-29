@@ -1,0 +1,126 @@
+{
+  "coupons": {
+    "metadata": {
+      "isin": {
+        "type": "string",
+        "bytes": 765,
+        "max_size": 0
+      },
+      "name": {
+        "type": "string",
+        "bytes": 765,
+        "max_size": 0
+      },
+      "issuevalue": {
+        "type": "double"
+      },
+      "coupondate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "recorddate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "startdate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "initialfacevalue": {
+        "type": "double"
+      },
+      "facevalue": {
+        "type": "double"
+      },
+      "faceunit": {
+        "type": "string",
+        "bytes": 9,
+        "max_size": 0
+      },
+      "value": {
+        "type": "double"
+      },
+      "valueprc": {
+        "type": "double"
+      },
+      "value_rub": {
+        "type": "double"
+      }
+    },
+    "columns": [
+      "isin",
+      "name",
+      "issuevalue",
+      "coupondate",
+      "recorddate",
+      "startdate",
+      "initialfacevalue",
+      "facevalue",
+      "faceunit",
+      "value",
+      "valueprc",
+      "value_rub"
+    ],
+    "data": [
+      [
+        "RU000A101PR4",
+        "\u0411\u0430\u043d\u043a \u0412\u0422\u0411 (\u041f\u0410\u041e) \u0411-1-70",
+        554193000,
+        "2020-11-24",
+        null,
+        "2020-05-26",
+        1000,
+        1000,
+        "RUB",
+        0.05,
+        0.01,
+        0.05
+      ],
+      [
+        "RU000A101PR4",
+        "\u0411\u0430\u043d\u043a \u0412\u0422\u0411 (\u041f\u0410\u041e) \u0411-1-70",
+        554193000,
+        "2021-05-25",
+        null,
+        "2020-11-24",
+        1000,
+        1000,
+        "RUB",
+        0.05,
+        0.01,
+        0.05
+      ],
+      [
+        "RU000A101PR4",
+        "\u0411\u0430\u043d\u043a \u0412\u0422\u0411 (\u041f\u0410\u041e) \u0411-1-70",
+        554193000,
+        "2021-11-23",
+        null,
+        "2021-05-25",
+        1000,
+        1000,
+        "RUB",
+        0.05,
+        0.01,
+        0.05
+      ],
+      [
+        "RU000A101PR4",
+        "\u0411\u0430\u043d\u043a \u0412\u0422\u0411 (\u041f\u0410\u041e) \u0411-1-70",
+        554193000,
+        "2022-05-24",
+        null,
+        "2021-11-23",
+        1000,
+        1000,
+        "RUB",
+        0.05,
+        0.01,
+        0.05
+      ]
+    ]
+  }
+}

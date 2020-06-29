@@ -1,0 +1,285 @@
+{
+  "coupons": {
+    "metadata": {
+      "isin": {
+        "type": "string",
+        "bytes": 765,
+        "max_size": 0
+      },
+      "name": {
+        "type": "string",
+        "bytes": 765,
+        "max_size": 0
+      },
+      "issuevalue": {
+        "type": "double"
+      },
+      "coupondate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "recorddate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "startdate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "initialfacevalue": {
+        "type": "double"
+      },
+      "facevalue": {
+        "type": "double"
+      },
+      "faceunit": {
+        "type": "string",
+        "bytes": 9,
+        "max_size": 0
+      },
+      "value": {
+        "type": "double"
+      },
+      "valueprc": {
+        "type": "double"
+      },
+      "value_rub": {
+        "type": "double"
+      }
+    },
+    "columns": [
+      "isin",
+      "name",
+      "issuevalue",
+      "coupondate",
+      "recorddate",
+      "startdate",
+      "initialfacevalue",
+      "facevalue",
+      "faceunit",
+      "value",
+      "valueprc",
+      "value_rub"
+    ],
+    "data": [
+      [
+        "RU000A0JXEV5",
+        "\u041c\u043e\u0431\u0438\u043b\u044c\u043d\u044b\u0435 \u0422\u0435\u043b\u0435\u0421\u0438\u0441\u0442\u0435\u043c\u044b 001P-01",
+        10000000000,
+        "2017-08-11",
+        "2017-08-10",
+        "2017-02-10",
+        1000,
+        1000,
+        "RUB",
+        44.88,
+        9,
+        44.88
+      ],
+      [
+        "RU000A0JXEV5",
+        "\u041c\u043e\u0431\u0438\u043b\u044c\u043d\u044b\u0435 \u0422\u0435\u043b\u0435\u0421\u0438\u0441\u0442\u0435\u043c\u044b 001P-01",
+        10000000000,
+        "2018-02-09",
+        "2018-02-08",
+        "2017-08-11",
+        1000,
+        1000,
+        "RUB",
+        44.88,
+        9,
+        44.88
+      ],
+      [
+        "RU000A0JXEV5",
+        "\u041c\u043e\u0431\u0438\u043b\u044c\u043d\u044b\u0435 \u0422\u0435\u043b\u0435\u0421\u0438\u0441\u0442\u0435\u043c\u044b 001P-01",
+        10000000000,
+        "2018-08-10",
+        "2018-08-09",
+        "2018-02-09",
+        1000,
+        1000,
+        "RUB",
+        44.88,
+        9,
+        44.88
+      ],
+      [
+        "RU000A0JXEV5",
+        "\u041c\u043e\u0431\u0438\u043b\u044c\u043d\u044b\u0435 \u0422\u0435\u043b\u0435\u0421\u0438\u0441\u0442\u0435\u043c\u044b 001P-01",
+        10000000000,
+        "2019-02-08",
+        "2019-02-07",
+        "2018-08-10",
+        1000,
+        1000,
+        "RUB",
+        44.88,
+        9,
+        44.88
+      ],
+      [
+        "RU000A0JXEV5",
+        "\u041c\u043e\u0431\u0438\u043b\u044c\u043d\u044b\u0435 \u0422\u0435\u043b\u0435\u0421\u0438\u0441\u0442\u0435\u043c\u044b 001P-01",
+        10000000000,
+        "2019-08-09",
+        "2019-08-08",
+        "2019-02-08",
+        1000,
+        1000,
+        "RUB",
+        44.88,
+        9,
+        44.88
+      ],
+      [
+        "RU000A0JXEV5",
+        "\u041c\u043e\u0431\u0438\u043b\u044c\u043d\u044b\u0435 \u0422\u0435\u043b\u0435\u0421\u0438\u0441\u0442\u0435\u043c\u044b 001P-01",
+        10000000000,
+        "2020-02-07",
+        "2020-02-06",
+        "2019-08-09",
+        1000,
+        1000,
+        "RUB",
+        44.88,
+        9,
+        44.88
+      ],
+      [
+        "RU000A0JXEV5",
+        "\u041c\u043e\u0431\u0438\u043b\u044c\u043d\u044b\u0435 \u0422\u0435\u043b\u0435\u0421\u0438\u0441\u0442\u0435\u043c\u044b 001P-01",
+        10000000000,
+        "2020-08-07",
+        "2020-08-06",
+        "2020-02-07",
+        1000,
+        1000,
+        "RUB",
+        44.88,
+        9,
+        44.88
+      ],
+      [
+        "RU000A0JXEV5",
+        "\u041c\u043e\u0431\u0438\u043b\u044c\u043d\u044b\u0435 \u0422\u0435\u043b\u0435\u0421\u0438\u0441\u0442\u0435\u043c\u044b 001P-01",
+        10000000000,
+        "2021-02-05",
+        "2021-02-04",
+        "2020-08-07",
+        1000,
+        1000,
+        "RUB",
+        44.88,
+        9,
+        44.88
+      ],
+      [
+        "RU000A0JXEV5",
+        "\u041c\u043e\u0431\u0438\u043b\u044c\u043d\u044b\u0435 \u0422\u0435\u043b\u0435\u0421\u0438\u0441\u0442\u0435\u043c\u044b 001P-01",
+        10000000000,
+        "2021-08-06",
+        "2021-08-05",
+        "2021-02-05",
+        1000,
+        1000,
+        "RUB",
+        44.88,
+        9,
+        44.88
+      ],
+      [
+        "RU000A0JXEV5",
+        "\u041c\u043e\u0431\u0438\u043b\u044c\u043d\u044b\u0435 \u0422\u0435\u043b\u0435\u0421\u0438\u0441\u0442\u0435\u043c\u044b 001P-01",
+        10000000000,
+        "2022-02-04",
+        "2022-02-03",
+        "2021-08-06",
+        1000,
+        1000,
+        "RUB",
+        44.88,
+        9,
+        44.88
+      ]
+    ]
+  },
+  "amortizations": {
+    "metadata": {
+      "isin": {
+        "type": "string",
+        "bytes": 765,
+        "max_size": 0
+      },
+      "name": {
+        "type": "string",
+        "bytes": 765,
+        "max_size": 0
+      },
+      "issuevalue": {
+        "type": "double"
+      },
+      "amortdate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "facevalue": {
+        "type": "double"
+      },
+      "initialfacevalue": {
+        "type": "double"
+      },
+      "faceunit": {
+        "type": "string",
+        "bytes": 9,
+        "max_size": 0
+      },
+      "valueprc": {
+        "type": "double"
+      },
+      "value": {
+        "type": "double"
+      },
+      "value_rub": {
+        "type": "double"
+      },
+      "data_source": {
+        "type": "string",
+        "bytes": 36,
+        "max_size": 0
+      }
+    },
+    "columns": [
+      "isin",
+      "name",
+      "issuevalue",
+      "amortdate",
+      "facevalue",
+      "initialfacevalue",
+      "faceunit",
+      "valueprc",
+      "value",
+      "value_rub",
+      "data_source"
+    ],
+    "data": [
+      [
+        "RU000A0JXEV5",
+        "\u041c\u043e\u0431\u0438\u043b\u044c\u043d\u044b\u0435 \u0422\u0435\u043b\u0435\u0421\u0438\u0441\u0442\u0435\u043c\u044b 001P-01",
+        10000000000,
+        "2022-02-04",
+        1000,
+        1000,
+        "RUB",
+        100.0,
+        1000,
+        1000,
+        "maturity"
+      ]
+    ]
+  }
+}

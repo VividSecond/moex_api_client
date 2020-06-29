@@ -1,0 +1,229 @@
+{
+  "coupons": {
+    "metadata": {
+      "isin": {
+        "type": "string",
+        "bytes": 765,
+        "max_size": 0
+      },
+      "name": {
+        "type": "string",
+        "bytes": 765,
+        "max_size": 0
+      },
+      "issuevalue": {
+        "type": "double"
+      },
+      "coupondate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "recorddate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "startdate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "initialfacevalue": {
+        "type": "double"
+      },
+      "facevalue": {
+        "type": "double"
+      },
+      "faceunit": {
+        "type": "string",
+        "bytes": 9,
+        "max_size": 0
+      },
+      "value": {
+        "type": "double"
+      },
+      "valueprc": {
+        "type": "double"
+      },
+      "value_rub": {
+        "type": "double"
+      }
+    },
+    "columns": [
+      "isin",
+      "name",
+      "issuevalue",
+      "coupondate",
+      "recorddate",
+      "startdate",
+      "initialfacevalue",
+      "facevalue",
+      "faceunit",
+      "value",
+      "valueprc",
+      "value_rub"
+    ],
+    "data": [
+      [
+        "RU000A0ZYSS5",
+        "\u0416\u0438\u043b\u043a\u0430\u043f\u0438\u043d\u0432\u0435\u0441\u0442 \u0411\u041e-01",
+        170782000,
+        "2018-09-04",
+        null,
+        "2018-03-06",
+        1000,
+        1000,
+        "RUB",
+        69.81,
+        14,
+        69.81
+      ],
+      [
+        "RU000A0ZYSS5",
+        "\u0416\u0438\u043b\u043a\u0430\u043f\u0438\u043d\u0432\u0435\u0441\u0442 \u0411\u041e-01",
+        170782000,
+        "2019-03-05",
+        null,
+        "2018-09-04",
+        1000,
+        1000,
+        "RUB",
+        69.81,
+        14,
+        69.81
+      ],
+      [
+        "RU000A0ZYSS5",
+        "\u0416\u0438\u043b\u043a\u0430\u043f\u0438\u043d\u0432\u0435\u0441\u0442 \u0411\u041e-01",
+        170782000,
+        "2019-09-03",
+        null,
+        "2019-03-05",
+        1000,
+        1000,
+        "RUB",
+        69.81,
+        14,
+        69.81
+      ],
+      [
+        "RU000A0ZYSS5",
+        "\u0416\u0438\u043b\u043a\u0430\u043f\u0438\u043d\u0432\u0435\u0441\u0442 \u0411\u041e-01",
+        170782000,
+        "2020-03-03",
+        null,
+        "2019-09-03",
+        1000,
+        1000,
+        "RUB",
+        69.81,
+        14,
+        69.81
+      ],
+      [
+        "RU000A0ZYSS5",
+        "\u0416\u0438\u043b\u043a\u0430\u043f\u0438\u043d\u0432\u0435\u0441\u0442 \u0411\u041e-01",
+        170782000,
+        "2020-09-01",
+        "2020-08-31",
+        "2020-03-03",
+        1000,
+        1000,
+        "RUB",
+        69.81,
+        14,
+        69.81
+      ],
+      [
+        "RU000A0ZYSS5",
+        "\u0416\u0438\u043b\u043a\u0430\u043f\u0438\u043d\u0432\u0435\u0441\u0442 \u0411\u041e-01",
+        170782000,
+        "2021-03-05",
+        "2021-03-04",
+        "2020-09-01",
+        1000,
+        1000,
+        "RUB",
+        70.96,
+        14,
+        70.96
+      ]
+    ]
+  },
+  "amortizations": {
+    "metadata": {
+      "isin": {
+        "type": "string",
+        "bytes": 765,
+        "max_size": 0
+      },
+      "name": {
+        "type": "string",
+        "bytes": 765,
+        "max_size": 0
+      },
+      "issuevalue": {
+        "type": "double"
+      },
+      "amortdate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "facevalue": {
+        "type": "double"
+      },
+      "initialfacevalue": {
+        "type": "double"
+      },
+      "faceunit": {
+        "type": "string",
+        "bytes": 9,
+        "max_size": 0
+      },
+      "valueprc": {
+        "type": "double"
+      },
+      "value": {
+        "type": "double"
+      },
+      "value_rub": {
+        "type": "double"
+      },
+      "data_source": {
+        "type": "string",
+        "bytes": 36,
+        "max_size": 0
+      }
+    },
+    "columns": [
+      "isin",
+      "name",
+      "issuevalue",
+      "amortdate",
+      "facevalue",
+      "initialfacevalue",
+      "faceunit",
+      "valueprc",
+      "value",
+      "value_rub",
+      "data_source"
+    ],
+    "data": [
+      [
+        "RU000A0ZYSS5",
+        "\u0416\u0438\u043b\u043a\u0430\u043f\u0438\u043d\u0432\u0435\u0441\u0442 \u0411\u041e-01",
+        170782000,
+        "2021-03-05",
+        1000,
+        1000,
+        "RUB",
+        100.0,
+        1000,
+        1000,
+        "maturity"
+      ]
+    ]
+  }
+}

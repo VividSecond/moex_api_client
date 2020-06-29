@@ -1,0 +1,154 @@
+{
+  "coupons": {
+    "metadata": {
+      "isin": {
+        "type": "string",
+        "bytes": 765,
+        "max_size": 0
+      },
+      "name": {
+        "type": "string",
+        "bytes": 765,
+        "max_size": 0
+      },
+      "issuevalue": {
+        "type": "double"
+      },
+      "coupondate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "recorddate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "startdate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "initialfacevalue": {
+        "type": "double"
+      },
+      "facevalue": {
+        "type": "double"
+      },
+      "faceunit": {
+        "type": "string",
+        "bytes": 9,
+        "max_size": 0
+      },
+      "value": {
+        "type": "double"
+      },
+      "valueprc": {
+        "type": "double"
+      },
+      "value_rub": {
+        "type": "double"
+      }
+    },
+    "columns": [
+      "isin",
+      "name",
+      "issuevalue",
+      "coupondate",
+      "recorddate",
+      "startdate",
+      "initialfacevalue",
+      "facevalue",
+      "faceunit",
+      "value",
+      "valueprc",
+      "value_rub"
+    ],
+    "data": [
+      [
+        "RU000A0JXQX5",
+        "\u0410\u043b\u044c\u0444\u0430-\u0411\u0430\u043d\u043a \u0410\u041e \u043e\u0431\u043b. \u0411\u041e-19",
+        511666000,
+        "2017-11-10",
+        null,
+        "2017-05-12",
+        1000,
+        1000,
+        "RUB",
+        24.93,
+        5,
+        24.93
+      ],
+      [
+        "RU000A0JXQX5",
+        "\u0410\u043b\u044c\u0444\u0430-\u0411\u0430\u043d\u043a \u0410\u041e \u043e\u0431\u043b. \u0411\u041e-19",
+        511666000,
+        "2018-05-11",
+        null,
+        "2017-11-10",
+        1000,
+        1000,
+        "RUB",
+        24.93,
+        5,
+        24.93
+      ],
+      [
+        "RU000A0JXQX5",
+        "\u0410\u043b\u044c\u0444\u0430-\u0411\u0430\u043d\u043a \u0410\u041e \u043e\u0431\u043b. \u0411\u041e-19",
+        511666000,
+        "2018-11-09",
+        null,
+        "2018-05-11",
+        1000,
+        1000,
+        "RUB",
+        24.93,
+        5,
+        24.93
+      ],
+      [
+        "RU000A0JXQX5",
+        "\u0410\u043b\u044c\u0444\u0430-\u0411\u0430\u043d\u043a \u0410\u041e \u043e\u0431\u043b. \u0411\u041e-19",
+        511666000,
+        "2019-05-10",
+        null,
+        "2018-11-09",
+        1000,
+        1000,
+        "RUB",
+        24.93,
+        5,
+        24.93
+      ],
+      [
+        "RU000A0JXQX5",
+        "\u0410\u043b\u044c\u0444\u0430-\u0411\u0430\u043d\u043a \u0410\u041e \u043e\u0431\u043b. \u0411\u041e-19",
+        511666000,
+        "2019-11-08",
+        null,
+        "2019-05-13",
+        1000,
+        1000,
+        "RUB",
+        24.93,
+        5,
+        24.93
+      ],
+      [
+        "RU000A0JXQX5",
+        "\u0410\u043b\u044c\u0444\u0430-\u0411\u0430\u043d\u043a \u0410\u041e \u043e\u0431\u043b. \u0411\u041e-19",
+        511666000,
+        "2020-05-08",
+        null,
+        "2019-11-08",
+        1000,
+        1000,
+        "RUB",
+        24.93,
+        5,
+        24.93
+      ]
+    ]
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "coupons": {
+    "metadata": {
+      "isin": {
+        "type": "string",
+        "bytes": 765,
+        "max_size": 0
+      },
+      "name": {
+        "type": "string",
+        "bytes": 765,
+        "max_size": 0
+      },
+      "issuevalue": {
+        "type": "double"
+      },
+      "coupondate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "recorddate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "startdate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "initialfacevalue": {
+        "type": "double"
+      },
+      "facevalue": {
+        "type": "double"
+      },
+      "faceunit": {
+        "type": "string",
+        "bytes": 9,
+        "max_size": 0
+      },
+      "value": {
+        "type": "double"
+      },
+      "valueprc": {
+        "type": "double"
+      },
+      "value_rub": {
+        "type": "double"
+      }
+    },
+    "columns": [
+      "isin",
+      "name",
+      "issuevalue",
+      "coupondate",
+      "recorddate",
+      "startdate",
+      "initialfacevalue",
+      "facevalue",
+      "faceunit",
+      "value",
+      "valueprc",
+      "value_rub"
+    ],
+    "data": [
+      [
+        "XS1654237129",
+        "BCS SP Plc Series 2017-8",
+        700000000,
+        "2017-08-16",
+        "2017-08-15",
+        "2017-08-02",
+        350000,
+        350000,
+        "RUB",
+        1208.22,
+        9,
+        1208.22
+      ],
+      [
+        "XS1654237129",
+        "BCS SP Plc Series 2017-8",
+        700000000,
+        "2018-02-16",
+        "2018-02-15",
+        "2017-08-16",
+        350000,
+        350000,
+        "RUB",
+        21172.6,
+        12,
+        21172.6
+      ],
+      [
+        "XS1654237129",
+        "BCS SP Plc Series 2017-8",
+        700000000,
+        "2018-08-16",
+        "2018-08-15",
+        "2018-02-19",
+        350000,
+        350000,
+        "RUB",
+        20827.4,
+        12,
+        20827.4
+      ],
+      [
+        "XS1654237129",
+        "BCS SP Plc Series 2017-8",
+        700000000,
+        "2019-02-16",
+        "2019-02-15",
+        "2018-08-17",
+        350000,
+        350000,
+        "RUB",
+        21402.74,
+        12,
+        21402.74
+      ],
+      [
+        "XS1654237129",
+        "BCS SP Plc Series 2017-8",
+        700000000,
+        "2019-08-16",
+        "2019-08-15",
+        "2019-02-18",
+        350000,
+        350000,
+        "RUB",
+        20597.26,
+        12,
+        20597.26
+      ],
+      [
+        "XS1654237129",
+        "BCS SP Plc Series 2017-8",
+        700000000,
+        "2020-02-16",
+        "2020-02-14",
+        "2019-08-19",
+        350000,
+        350000,
+        "RUB",
+        21272.89,
+        12,
+        21272.89
+      ],
+      [
+        "XS1654237129",
+        "BCS SP Plc Series 2017-8",
+        700000000,
+        "2020-08-16",
+        "2020-08-14",
+        "2020-02-17",
+        350000,
+        350000,
+        "RUB",
+        20885.25,
+        12,
+        20885.25
+      ]
+    ]
+  },
+  "amortizations": {
+    "metadata": {
+      "isin": {
+        "type": "string",
+        "bytes": 765,
+        "max_size": 0
+      },
+      "name": {
+        "type": "string",
+        "bytes": 765,
+        "max_size": 0
+      },
+      "issuevalue": {
+        "type": "double"
+      },
+      "amortdate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "facevalue": {
+        "type": "double"
+      },
+      "initialfacevalue": {
+        "type": "double"
+      },
+      "faceunit": {
+        "type": "string",
+        "bytes": 9,
+        "max_size": 0
+      },
+      "valueprc": {
+        "type": "double"
+      },
+      "value": {
+        "type": "double"
+      },
+      "value_rub": {
+        "type": "double"
+      },
+      "data_source": {
+        "type": "string",
+        "bytes": 36,
+        "max_size": 0
+      }
+    },
+    "columns": [
+      "isin",
+      "name",
+      "issuevalue",
+      "amortdate",
+      "facevalue",
+      "initialfacevalue",
+      "faceunit",
+      "valueprc",
+      "value",
+      "value_rub",
+      "data_source"
+    ],
+    "data": [
+      [
+        "XS1654237129",
+        "BCS SP Plc Series 2017-8",
+        700000000,
+        "2020-08-16",
+        350000,
+        350000,
+        "RUB",
+        100.0,
+        350000,
+        350000,
+        "maturity"
+      ]
+    ]
+  }
+}

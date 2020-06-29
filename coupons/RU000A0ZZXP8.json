@@ -1,0 +1,201 @@
+{
+  "coupons": {
+    "metadata": {
+      "isin": {
+        "type": "string",
+        "bytes": 765,
+        "max_size": 0
+      },
+      "name": {
+        "type": "string",
+        "bytes": 765,
+        "max_size": 0
+      },
+      "issuevalue": {
+        "type": "double"
+      },
+      "coupondate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "recorddate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "startdate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "initialfacevalue": {
+        "type": "double"
+      },
+      "facevalue": {
+        "type": "double"
+      },
+      "faceunit": {
+        "type": "string",
+        "bytes": 9,
+        "max_size": 0
+      },
+      "value": {
+        "type": "double"
+      },
+      "valueprc": {
+        "type": "double"
+      },
+      "value_rub": {
+        "type": "double"
+      }
+    },
+    "columns": [
+      "isin",
+      "name",
+      "issuevalue",
+      "coupondate",
+      "recorddate",
+      "startdate",
+      "initialfacevalue",
+      "facevalue",
+      "faceunit",
+      "value",
+      "valueprc",
+      "value_rub"
+    ],
+    "data": [
+      [
+        "RU000A0ZZXP8",
+        "\u041a\u0440\u0435\u0434\u0438\u0442 \u0415\u0432\u0440\u043e\u043f\u0430 \u0411\u0430\u043d\u043a \u0410\u041e 001\u0420-02",
+        3000000000,
+        "2019-06-12",
+        null,
+        "2018-12-12",
+        1000,
+        1000,
+        "RUB",
+        52.36,
+        10.5,
+        52.36
+      ],
+      [
+        "RU000A0ZZXP8",
+        "\u041a\u0440\u0435\u0434\u0438\u0442 \u0415\u0432\u0440\u043e\u043f\u0430 \u0411\u0430\u043d\u043a \u0410\u041e 001\u0420-02",
+        3000000000,
+        "2019-12-11",
+        null,
+        "2019-06-12",
+        1000,
+        1000,
+        "RUB",
+        52.36,
+        10.5,
+        52.36
+      ],
+      [
+        "RU000A0ZZXP8",
+        "\u041a\u0440\u0435\u0434\u0438\u0442 \u0415\u0432\u0440\u043e\u043f\u0430 \u0411\u0430\u043d\u043a \u0410\u041e 001\u0420-02",
+        3000000000,
+        "2020-06-10",
+        "2020-06-09",
+        "2019-12-11",
+        1000,
+        1000,
+        "RUB",
+        37.4,
+        7.5,
+        37.4
+      ],
+      [
+        "RU000A0ZZXP8",
+        "\u041a\u0440\u0435\u0434\u0438\u0442 \u0415\u0432\u0440\u043e\u043f\u0430 \u0411\u0430\u043d\u043a \u0410\u041e 001\u0420-02",
+        3000000000,
+        "2020-12-09",
+        "2020-12-08",
+        "2020-06-10",
+        1000,
+        1000,
+        "RUB",
+        37.4,
+        7.5,
+        37.4
+      ]
+    ]
+  },
+  "amortizations": {
+    "metadata": {
+      "isin": {
+        "type": "string",
+        "bytes": 765,
+        "max_size": 0
+      },
+      "name": {
+        "type": "string",
+        "bytes": 765,
+        "max_size": 0
+      },
+      "issuevalue": {
+        "type": "double"
+      },
+      "amortdate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "facevalue": {
+        "type": "double"
+      },
+      "initialfacevalue": {
+        "type": "double"
+      },
+      "faceunit": {
+        "type": "string",
+        "bytes": 9,
+        "max_size": 0
+      },
+      "valueprc": {
+        "type": "double"
+      },
+      "value": {
+        "type": "double"
+      },
+      "value_rub": {
+        "type": "double"
+      },
+      "data_source": {
+        "type": "string",
+        "bytes": 36,
+        "max_size": 0
+      }
+    },
+    "columns": [
+      "isin",
+      "name",
+      "issuevalue",
+      "amortdate",
+      "facevalue",
+      "initialfacevalue",
+      "faceunit",
+      "valueprc",
+      "value",
+      "value_rub",
+      "data_source"
+    ],
+    "data": [
+      [
+        "RU000A0ZZXP8",
+        "\u041a\u0440\u0435\u0434\u0438\u0442 \u0415\u0432\u0440\u043e\u043f\u0430 \u0411\u0430\u043d\u043a \u0410\u041e 001\u0420-02",
+        3000000000,
+        "2020-12-09",
+        1000,
+        1000,
+        "RUB",
+        100.0,
+        1000,
+        1000,
+        "maturity"
+      ]
+    ]
+  }
+}

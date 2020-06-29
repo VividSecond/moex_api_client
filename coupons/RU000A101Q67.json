@@ -1,0 +1,98 @@
+{
+  "coupons": {
+    "metadata": {
+      "isin": {
+        "type": "string",
+        "bytes": 765,
+        "max_size": 0
+      },
+      "name": {
+        "type": "string",
+        "bytes": 765,
+        "max_size": 0
+      },
+      "issuevalue": {
+        "type": "double"
+      },
+      "coupondate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "recorddate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "startdate": {
+        "type": "date",
+        "bytes": 10,
+        "max_size": 0
+      },
+      "initialfacevalue": {
+        "type": "double"
+      },
+      "facevalue": {
+        "type": "double"
+      },
+      "faceunit": {
+        "type": "string",
+        "bytes": 9,
+        "max_size": 0
+      },
+      "value": {
+        "type": "double"
+      },
+      "valueprc": {
+        "type": "double"
+      },
+      "value_rub": {
+        "type": "double"
+      }
+    },
+    "columns": [
+      "isin",
+      "name",
+      "issuevalue",
+      "coupondate",
+      "recorddate",
+      "startdate",
+      "initialfacevalue",
+      "facevalue",
+      "faceunit",
+      "value",
+      "valueprc",
+      "value_rub"
+    ],
+    "data": [
+      [
+        "RU000A101Q67",
+        "\u0411\u0430\u043d\u043a \u0412\u0422\u0411 (\u041f\u0410\u041e) \u0411-1-64",
+        10000000000,
+        "2020-11-26",
+        null,
+        "2020-05-28",
+        1000,
+        1000,
+        "RUB",
+        25.68,
+        5.15,
+        25.68
+      ],
+      [
+        "RU000A101Q67",
+        "\u0411\u0430\u043d\u043a \u0412\u0422\u0411 (\u041f\u0410\u041e) \u0411-1-64",
+        10000000000,
+        "2021-05-27",
+        null,
+        "2020-11-26",
+        1000,
+        1000,
+        "RUB",
+        25.68,
+        5.15,
+        25.68
+      ]
+    ]
+  }
+}
