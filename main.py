@@ -5,88 +5,66 @@ import os
 import argparse
 import numpy
 
-def get_data(sec_file_name, dir_full_path):
-    full_path_to_json = os.path.join(dir_full_path, sec_file_name)
-    with open(full_path_to_json) as json_file:
-        return json.load(json_file)
-
-def request_json_data(request_str):
-    return json.loads(common.get_raw_html(request_str))
-
-class DataDispatcher:
-    absolute_folder_path = ""
-    request_str = ""
-    is_need_download = False
-
-    def __init__(self, dir_name, request_str, is_need_download):
-        working_dir = os.path.dirname(__file__)
-        self.absolute_folder_path = os.path.join(working_dir, dir_name)
-        self.request_str = request_str
-        self.is_need_download = is_need_download
-
-    def download_data(self, ids):
-        if not self.is_need_download:
-            return
-        downloaded_data = {x : request_json_data(request_str.format(x)) for x in ids}
-        for k in downloaded_data:
-            sec_data_relative_path = os.path.join(self.absolute_folder_path, k + ".json")
-            common.save_json(downloaded_data[k], sec_data_relative_path)
-
-    def load_data(self, ids):
-        return { x : get_data(x + ".json", self.absolute_folder_path) for x in ids }
-
-def get_bonds_ids(data_parser, request_str):
-    # list of all bonds
-    bonds = request_json_data(request_str)
-    bonds = {k : data_parser.merge_column_names_and_values(v) \
-                for k, v in bonds.items()}
-
-    secids = data_parser.get_data(bonds, [pr.SECID])
-    return secids
-
 def parse_input_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('-d', action='store_true')
     return parser.parse_args()
 
+class Cacher():
+    folder_name = ""
+    response_name = ""
+    def __init__(self, folder_name, response_name):
+        self.folder_name = folder_name
+        self.response_name = response_name
+
+    def __call__(self, response):
+        working_dir = os.path.dirname(__file__)
+        absolute_folder_path = os.path.join(working_dir, self.folder_name)
+        absolute_file_path = os.path.join(absolute_folder_path, self.response_name)
+        common.save_json(response, absolute_file_path)
+
 def main():
     args = parse_input_args()
-    data_parser = pr.ResponseParser()
+
+    fields = [(pr.SECID, pr.SECURITIE,'SECID')]
+    secids_data_parser = pr.ResponseParser(fields)
     request_all_bonds_str = 'http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQCB/securities.json?iss.only=securities'
-    secids = get_bonds_ids(data_parser, request_all_bonds_str)
+    dummy_chacher = lambda a: None
+    response_secids = pr.get_response(secids_data_parser, request_all_bonds_str, dummy_chacher, [pr.SECID])
+    secids = response_secids[pr.SECID]
+
+    bonds_fields = [(pr.ACCRUEDINT, pr.SECURITIE,'ACCRUEDINT'),
+                    (pr.COUPON_PERIOD, pr.SECURITIE,'COUPONPERIOD'),
+                    (pr.CLOSE_PRICE, pr.MARKETDATA,'CLOSEPRICE'),
+                    (pr.LOT_VALUE, pr.SECURITIE,'LOTVALUE'),
+                    (pr.MAT_DATE, pr.SECURITIE,'MATDATE', pr.DataConverter),
+                    (pr.BUYBACK_DATE, pr.SECURITIE,'BUYBACKDATE', pr.DataConverter),
+                    (pr.PREV_ADMITTED_QUOTE, pr.SECURITIE,'PREVADMITTEDQUOTE'),
+                    (pr.LISTLEVEL, pr.SECURITIE,'LISTLEVEL'),
+                    (pr.FACEUNIT, pr.SECURITIE,'FACEUNIT'),
+                    (pr.STATUS, pr.SECURITIE,'STATUS')]
+    bonds_data_parser = pr.ResponseParser(bonds_fields)
     request_sec_str = 'http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQCB/securities/{0}.json'
-    sec_dispetcher =  DataDispatcher('bonds', request_sec_str, args.d)
-    sec_dispetcher.download_data(secids)
+    fixed_bond_data = {x : pr.get_response(bonds_data_parser, \
+                request_sec_str.format(x), Cacher("bonds", x + ".json")) for x in secids}
+
+    amort_a_coupons_fields = [(pr.VALUE_RUB, pr.COUPONS,'value_rub'),
+                                (pr.AMORT_VALUE_RUB, pr.AMORTIZATIONS,'value_rub'),
+                                (pr.COUPON_DATE, pr.COUPONS,'coupondate', pr.DataConverter),
+                                (pr.AMORT_DATE, pr.AMORTIZATIONS,'amortdate', pr.DataConverter)]
+    amort_a_coupons_parser = pr.ResponseParser(amort_a_coupons_fields)
     request_coupon_str = 'https://iss.moex.com/iss/statistics/engines/stock/markets/bonds/bondization/{0}/securities.json?iss.only=coupons,amortizations'
-    coupon_dispetcher =  DataDispatcher('coupons', request_coupon_str, args.d)
-    coupon_dispetcher.download_data(secids)
+    a_and_c = {x : pr.get_response(amort_a_coupons_parser, \
+            request_coupon_str.format(x), Cacher("coupons", x + ".json")) for x in secids}
 
-    secs = sec_dispetcher.load_data(secids)
-    a_and_c = coupon_dispetcher.load_data(secids)
-    general_data = {x : {**secs[x], **a_and_c[x]} for x in secs}
-    
-    used_blocks = []
-    for sec_id, val in general_data.items():
-        general_data[sec_id] = {k : v for k, v in val.items() if k in used_blocks}
-
-    for sec_id in general_data:
-        general_data[sec_id] = {k : data_parser.merge_column_names_and_values(v) \
-            for k, v in general_data[sec_id].items()}
-
-    for sec_id in general_data:
-        general_data[sec_id] = {k : (v[0] if len(v) == 1 and k != coupons_blk_name else v) \
-            for k, v in general_data[sec_id].items()}
-
-
-    parsed_data = {x : data_parser.get_data(general_data[x]) for x in general_data}
-    parsed_data = {x : p.preprocess_data(parsed_data[x]) for x in parsed_data}
-    parsed_data = {x : parsed_data[x] for x in parsed_data if not bond_stat.is_rejected(parsed_data[x])}
+    bonds = {x : {**fixed_bond_data[x], **a_and_c[x]} for x in fixed_bond_data}
+    bonds = {x : pr.preprocess_data(bonds[x]) for x in bonds}
     
     effective_returns = {}
-    for x in parsed_data:
-        effective_returns[x] = bond_stat.calculate_effective_return(parsed_data[x])
-    csv_format_data = [[x, *parsed_data[x], effective_returns[x]] for x in parsed_data]
-    csv_release_data = [bond_stat.print_data(x, parsed_data[x], effective_returns[x]) for x in parsed_data]
+    for x in bonds:
+        effective_returns[x] = pr.calculate_effective_return(bonds[x])
+    csv_format_data = [[x, *bonds[x], effective_returns[x]] for x in bonds]
+    csv_release_data = [pr.create_output(x, bonds[x], effective_returns[x]) for x in bonds]
 
     common.save_to_csv(csv_release_data, 'readble_data.csv')
     common.save_to_csv(csv_format_data, 'effective_returns.csv')

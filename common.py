@@ -25,14 +25,6 @@ def get_raw_html(url):
     page_request.raise_for_status()
     return page_request.text
 
-def extract_content_from_html(raw_content, tag, tag_attrs):
-	if not raw_content:
-		return []
-
-	soup = BeautifulSoup(raw_content, "html.parser")
-	table = soup.findAll(tag, tag_attrs)
-	return table
-
 def get_node(node, *node_names):
     next_node = node
     # TODO: wrap with try/catch block
